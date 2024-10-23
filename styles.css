@@ -72,6 +72,20 @@ body {
    color: #cccccc; /* Keep hover effect */
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.hamburger div {
+   width: 25px;
+   height: 3px;
+   background: black;
+   margin: 4px 0;
+}
+
 /* Hero section */
 .hero {
    text-align: center;
@@ -230,6 +244,21 @@ body {
    .nav-links {
        flex-direction: column;
        gap: 10px;
+       display: none; /* Hide nav links initially */
+       width: 100%; /* Full width for mobile view */
+       background-color: white; /* Background for dropdown */
+       position: absolute; /* Positioning for dropdown */
+       top: 70px; /* Adjust based on header height */
+       left: 0; /* Align to left */
+       padding: 20px 0; /* Padding for dropdown */
+   }
+
+   .nav-links.active {
+       display: flex; /* Show links when active */
+   }
+
+   .hamburger {
+       display: flex; /* Show hamburger icon on mobile */
    }
 
    .hero {
@@ -276,8 +305,6 @@ body {
        padding: 8px 16px;
    }
 }
-
-
 
 .contact {
    padding: 50px 20px;

@@ -1,3 +1,7 @@
-document.querySelector('.search-bar button').addEventListener('click', function() {
-   alert('Search functionality coming soon!');
+// Hamburger Menu Functionality
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
